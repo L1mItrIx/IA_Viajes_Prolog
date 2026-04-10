@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente de Viajes</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Asistente de Planificacion de Viajes</h1>
+    <p class="subtitulo">Ingrese su perfil y Prolog generara destinos recomendados</p>
+    <div class="divider"></div>
+    <form action="/plan" method="post">
+        <label>Nombre</label>
+        <input type="text" name="nombre" placeholder="Ej: Berny" required>
+
+        <label>Paises visitados</label>
+        <div class="hint">Separados por coma. Ej: costa_rica,panama,mexico</div>
+        <input type="text" name="paises_visitados" placeholder="costa_rica,panama">
+
+        <label>Continentes visitados</label>
+        <div class="hint">Ej: america o america,europa</div>
+        <input type="text" name="continentes_visitados" placeholder="america">
+
+        <div class="row">
+            <div>
+                <label>Presupuesto</label>
+                <select name="presupuesto">
+                    <option value="bajo">Bajo</option>
+                    <option value="medio" selected>Medio</option>
+                    <option value="alto">Alto</option>
+                </select>
+            </div>
+            <div>
+                <label>Clima</label>
+                <select name="clima_preferido">
+                    <option value="tropical" selected>Tropical</option>
+                    <option value="templado">Templado</option>
+                    <option value="frio">Frio</option>
+                    <option value="desertico">Desertico</option>
+                </select>
+            </div>
+            <div>
+                <label>Tipo viaje</label>
+                <select name="tipo_viaje">
+                    <option value="cultural" selected>Cultural</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="relajacion">Relajacion</option>
+                </select>
+            </div>
+        </div>
+
+        <label>Gustos</label>
+        <div class="hint">Ej: gastronomia,historia,ecoturismo,aventura</div>
+        <input type="text" name="gustos" placeholder="gastronomia,historia">
+
+        <button type="submit" class="btn">Generar Plan de Viaje con Prolog</button>
+    </form>
+</div>
+</body>
+</html>

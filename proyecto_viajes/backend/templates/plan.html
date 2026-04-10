@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Viaje</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Plan de Viaje para {{nombre}}</h1>
+    <p class="subtitulo">Recomendaciones generadas por Prolog e IA local en Ollama</p>
+    <div class="divider"></div>
+
+    <div class="ai-note">Las explicaciones de cada destino se generan en tu equipo con Ollama, sin costo de API.</div>
+
+    <div class="perfil-card">{{tags_html}}</div>
+
+    <h2 class="result-title">
+        Prolog encontro {{total}} destino(s) recomendado(s):
+    </h2>
+
+    {{destinos_html}}
+
+    <a href="/" class="volver">Volver y hacer otra consulta</a>
+    <div class="footer-note">Motor logico: SWI-Prolog 10.0.2 | IA generativa: Ollama local (costo $0)</div>
+</div>
+</body>
+</html>
