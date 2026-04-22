@@ -1,4 +1,4 @@
-# Berny Cordero Cerdas
+
 # Este modulo genera las explicaciones para cada pais recomendado
 # La IA generativa se consume desde ai_service.py.
 
@@ -36,14 +36,12 @@ INFO_PAISES = {
 def normalizar_texto_ia(texto: str) -> str:
     limpio = " ".join(texto.strip().split())
 
-    # Evita saludos o prefijos que ensucian la respuesta.
     for prefijo in ["hola", "¡hola", "estimada", "estimado", "querido", "querida"]:
         if limpio.lower().startswith(prefijo):
             partes = limpio.split(" ", 1)
             limpio = partes[1] if len(partes) > 1 else limpio
             break
 
-    # Mantenerla corta: maximo 2 oraciones.
     oraciones = [o.strip() for o in limpio.replace("!", ".").split(".") if o.strip()]
     if len(oraciones) > 2:
         limpio = ". ".join(oraciones[:2]) + "."

@@ -1,4 +1,4 @@
-# Berny Cordero Cerdas
+
 # Clases para guardar los datos del usuario y las recomendaciones
 
 from dataclasses import dataclass

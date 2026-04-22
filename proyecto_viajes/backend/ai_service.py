@@ -1,6 +1,3 @@
-# Berny Cordero Cerdas
-# Servicio local de IA generativa con Ollama
-
 import json
 import os
 import urllib.error

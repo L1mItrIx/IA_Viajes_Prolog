@@ -1,4 +1,4 @@
-# Berny Cordero Cerdas
+
 # Conexion con Prolog - pasa el perfil del usuario dinamicamente
 
 import subprocess

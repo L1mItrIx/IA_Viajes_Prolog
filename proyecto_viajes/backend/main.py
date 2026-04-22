@@ -1,4 +1,4 @@
-# Berny Cordero Cerdas
+
 # Aplicacion principal con FastAPI
 
 from fastapi import FastAPI, Form
